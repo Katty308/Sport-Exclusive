@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/img/fondo.jpg');
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Ajusta el espaciado interno */
+    height: 80px; /* Ajusta la altura total de la barra */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+
+/* Logo más grande */
+.logo img {
+    height: 100px;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1.5rem;
+}
+
+/* Enlaces de navegación con línea roja al pasar el cursor */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Línea roja debajo de cada enlace al pasar el cursor */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Ajuste de posición de la línea */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Tamaño de los iconos de la barra de navegación */
+.icons img {
+    width: 28px;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+/* Margen adicional para el último icono (carrito) */
+.icons a:last-child {
+    margin-right: 1.5rem; /* Ajusta el valor según lo que prefieras */
+}
+
+/* Iconos en color rojo al pasar el cursor */
+.icons img:hover {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(96%) saturate(454%) hue-rotate(344deg) brightness(94%) contrast(102%);
+}
+
+
+/* Sección de mapa */
+.mapa {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mapa iframe {
+    border: none;
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto form {
+    display: grid;
+    gap: 18px;
+}
+
+.formulario-contacto label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.formulario-contacto input, 
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.formulario-contacto input:focus, 
+.formulario-contacto textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.formulario-contacto button {
+    background-color: #cc2020;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #a39898;
+}
+
+/* Sección de Visitarnos */
+.mapa h2 {
+    color: #cc2020; /* Título de "Visítanos en nuestra tienda" en rojo */
+}
+
+/* Sección de contacto */
+.formulario-contacto h2 {
+    color: #cc2020; /* Título de "Contáctanos" en rojo */
+}
+
+
+/* Pie de página */
+footer {
+    background-color:#000;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    font-size: 1.5em; /* Tamaño del ícono */
+    color: #fff; /* Color de los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #3498db; /* Cambiar color al hacer hover */
+    transform: scale(1.1); /* Efecto de ampliación al pasar el cursor */
+}
+
+footer .social-icons a:focus {
+    outline: 2px solid #3498db; /* Focus para accesibilidad */
+}
+
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .mapa iframe {
+        max-width: 100%;
+    }
+
+    .formulario-contacto {
+        padding: 15px;
+    }
+}

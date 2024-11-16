@@ -1,0 +1,351 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Ajusta el espaciado interno */
+    height: 80px; /* Ajusta la altura total de la barra */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+/* Logo más grande */
+.logo img {
+    height: 80px;
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1.5rem;
+}
+
+/* Enlaces de navegación con línea roja al pasar el cursor */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Línea roja debajo de cada enlace al pasar el cursor */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Ajuste de posición de la línea */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Tamaño de los iconos de la barra de navegación */
+.icons img {
+    width: 28px;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+/* Margen adicional para el último icono (carrito) */
+.icons a:last-child {
+    margin-right: 1.5rem; /* Ajusta el valor según lo que prefieras */
+}
+
+/* Iconos en color rojo al pasar el cursor */
+.icons img:hover {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(96%) saturate(454%) hue-rotate(344deg) brightness(94%) contrast(102%);
+}
+
+
+/* Espacio entre la barra de navegación y el carrusel */
+.spacer {
+    height: 100px;
+}
+
+/* Carrusel */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Carrusel con fondo oscuro para texto */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/img/fondo.jpg');
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Fondo blanco específico para novedades.html */
+body.novedades {
+    background-image: none;
+    background-color: white;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #000; /* Fondo negro */
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1.5rem;
+}
+
+.nav-links a {
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red; /* Color naranja al pasar el ratón */
+}
+
+/* Iconos en la barra de navegación */
+.icons img {
+    width: 28px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.icons img:hover {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(96%) saturate(454%) hue-rotate(344deg) brightness(94%) contrast(102%);
+}
+
+/* Estilo para el carrusel */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* Ajustes para contenedor de imágenes de productos */
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden; /* Oculta el desbordamiento de imágenes */
+}
+
+.imagen-producto {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-height: 300px; /* Altura máxima del contenedor */
+    border-radius: 8px; /* Bordes redondeados para imágenes */
+}
+.discount-text {
+    font-weight: bold; /* Hace el texto en negrita */
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el div sea ajustable al contenido */
+}
+
+.img-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    transition: transform 0.3s ease;
+}
+.discount-text {
+    font-weight: bold; /* Hace el texto en negrita */
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el div sea ajustable al contenido */
+}
+
+/* Contenedor de las líneas y el título */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Línea negra a los lados */
+.section-title .line {
+    flex: 1;
+    height: 2px;
+    background-color: black;
+}
+
+/* Estilo del texto "Marcas" */
+.section-title span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    padding: 0 10px;
+}
+
+.container.text-center .row img {
+    max-width: 100px; /* Ajusta el tamaño máximo de ancho */
+    max-height: 100px; /* Ajusta el tamaño máximo de altura */
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    display: block;
+    margin: 0 auto; /* Centra la imagen dentro de su columna */
+}
+/* Estilo de la sección principal */
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #cc2020; /* Color rojo para títulos */
+}
+/* CSS para el footer */
+/* CSS para el footer */
+footer {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: relative; /* Posicionamiento relativo para anclarlo al final del contenido */
+    bottom: 0; /* Se asegura que quede al final del contenido */
+    left: 0; /* Se alinea a la izquierda */
+    margin-top: auto; /* Empuja el footer al final del contenedor */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Cambia el color al pasar el cursor */
+}
+
+/* Asegurar que el contenido no se superponga con el footer */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Altura mínima del viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.novedades {
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+}
+
